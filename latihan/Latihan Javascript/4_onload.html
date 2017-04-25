@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Fungsi Onload</title>
+		<script>
+			window.onload = function(){
+				var teks = document.getElementById('judul');
+				teks.innerHTML = "Belajar Javascript";
+			}
+			
+			function kata(){
+				var kata = document.getElementById('kata');
+				kata.innerHTML = "Saya senang belajar javascript";
+			}
+		</script>
+	</head>
+	<body onload="kata()">
+		<h2 id="judul"></h2>
+		<p id="kata"></p>
+	</body>
+</html>
