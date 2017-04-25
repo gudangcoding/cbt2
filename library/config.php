@@ -13,4 +13,4 @@ $url_website = "http://localhost/cbt2";
 $folder_website = "/cbt2";
 
 //menentukan timezone
-data_default_timezone_set('Asia/Jakarta');
+date_default_timezone_set('Asia/Jakarta');

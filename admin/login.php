@@ -11,6 +11,30 @@
 <script type="text/javascript" src="../assets/jquery/jquery-2.0.2.min.js"></script>
 
 <!-- Skrip jquery ajax -->
+<script type="text/javascript">
+	$(function(){
+		$('.alert').hide();
+		$('.login-form').submit(function(){
+			$('.alert').hide();
+			if($('input[name=username]').val() == ""){
+				$('.alert').fadeIn().html('Kotak input <b>Username</b> masih kosong!');
+			} else if($('input[name=password]').val() == ""){
+				$('.alert').fadeIn().html('Kotak input <b>Password</b> masih kosong!');
+			} else{
+				$.ajax({
+					type : "POST",
+					url : "login_cek.php",
+					data : $(this).serialize(),
+					success : function(data) {
+						if(data == "ok") window.location = "index.php";
+						else $('.alert').fadeIn().html(data);
+					}
+				});
+			}
+			return false;
+		});
+	});
+</script>
 
 </head>
 <body>
