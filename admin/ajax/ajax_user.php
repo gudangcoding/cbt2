@@ -27,3 +27,15 @@ elseif($_GET['action'] == "form_data") {
 
 	echo json_encode($data);
 }
+elseif($_GET['action'] == "insert") {
+	$password = md5($_POST['password']);
+	mysqli_query($mysqli, "INSERT INTO user SET nama='$_POST[nama]', username='$_POST[username]', password='$password', level='$_POST[level]' ");
+}
+elseif($_GET['action'] == "update") {
+	$password = md5($_POST['password']);
+	mysqli_query($mysqli, "UPDATE user SET nama='$_POST[nama]', username='$_POST[username]', level='$_POST[level]' WHERE id_user='$_POST[id]'");
+
+	if($password != "") {
+		mysqli_query($mysqli, "INSERT INTO user SET nama='$_POST[nama]', username='$_POST[username]', password='$password', level='$_POST[level]' WHERE id_user='$_POST[id]'");
+	}
+}

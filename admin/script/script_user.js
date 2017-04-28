@@ -42,3 +42,23 @@ function form_edit(id) {
       }
    });
 }
+
+//Ketika tombol simpan diklik
+function save_data() {
+   if(save_method == "add") url = "ajax/ajax_user.php?action=insert";
+   else url = "ajax/ajax_user.php?action=update";
+
+   $.ajax({
+      url : url,
+      type : "POST",
+      data : $('#modal_user form').serialize(),
+      success : function(data) {
+         $('#modal_user').modal('hide');
+         table.ajax.reload();
+      },
+      error: function(){
+         alert("Tidak dapat menyimpan data!");
+      }
+   });
+   return false;
+}
