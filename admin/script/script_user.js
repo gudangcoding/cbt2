@@ -62,3 +62,19 @@ function save_data() {
    });
    return false;
 }
+
+//Tombol hapus diklik
+function delete_data(id) {
+   if(confirm("Apakah yakin data akan dihapus?")){
+      $.ajax({
+         url : "ajax/ajax_user.php?actioin=delete&id="+id,
+         type: "GET",
+         success: function(data){
+            table.ajax.reload();
+         },
+         error : function(){
+            alert("Tidak dapat menghapus data!");
+         }
+      });
+   }
+}

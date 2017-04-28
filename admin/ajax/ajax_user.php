@@ -39,3 +39,6 @@ elseif($_GET['action'] == "update") {
 		mysqli_query($mysqli, "INSERT INTO user SET nama='$_POST[nama]', username='$_POST[username]', password='$password', level='$_POST[level]' WHERE id_user='$_POST[id]'");
 	}
 }
+elseif($_GET['action'] == "delete") {
+	mysqli_query($mysqli, "DELETE FROM user WHERE id_user='$_GET[id]'");
+}
