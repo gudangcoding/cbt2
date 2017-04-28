@@ -15,7 +15,7 @@ if(empty($_SESSION['username']) OR empty($_SESSION['password']) OR $_SESSION['lo
 	header('location:login.php');
 }
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
 <head>
 	<title>Halaman Administrator</title>

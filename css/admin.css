@@ -12,3 +12,19 @@ footer{
 	padding: 10px 0;
 	color: #888;
 }
+
+hr{
+	clear: both;
+}
+h3{
+	display: inline-block;
+	margin: 0;
+}
+.btn-top{
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+table .dataTable thead .sorting:after {
+	opacity: 0;
+	content: "";
+}
