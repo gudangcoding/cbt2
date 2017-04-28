@@ -21,3 +21,9 @@ if($_GET['action'] == "table_data"){
 	$output = array("data" => $data);
 	echo json_encode($output);
 }
+elseif($_GET['action'] == "form_data") {
+	$query = mysqli_query($mysqli, "SELECT * FROM user WHERE id_user='$_GET[id]'");
+	$data = mysqli_fetch_array($query);
+
+	echo json_encode($data);
+}

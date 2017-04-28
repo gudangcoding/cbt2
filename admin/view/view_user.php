@@ -18,7 +18,7 @@ create_button("success","plus-sign","Tambah","btn-add","form_add()");
 create_table(array("Nama","Username","Level","Aksi"));
 
 //membuat form tambah dan edit tabel
-open_form("model_user","return save_data()");
+open_form("modal_user","return save_data()");
 	create_textbox("Nama","nama","text",4,"","required");
 	create_textbox("Username","username","text", 4,"","required");
 	create_textbox("Password","password","password",4);
