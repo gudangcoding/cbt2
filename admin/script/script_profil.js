@@ -10,6 +10,7 @@ $(function() {
 				success : function(data) {
 					if(data == "ok") {
 						alert("Password berhasil diubah");
+						$('#form-profil')[0].reset();
 					} else{
 						alert(data);
 					}
