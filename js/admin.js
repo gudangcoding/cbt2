@@ -9,3 +9,8 @@ $(function(){
 		});
 	});
 });
+
+//ketika tombol edit diklik
+function show_soal(ujian) {
+	$('#content').load('view/view_soal.php?ujian='+ujian);
+}
