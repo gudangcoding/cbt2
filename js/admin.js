@@ -14,3 +14,8 @@ $(function(){
 function show_soal(ujian) {
 	$('#content').load('view/view_soal.php?ujian='+ujian);
 }
+
+//ketika nama kelas diklik
+function show_nilai(kelas, ujian) {
+	$('#content').load('view/view_nilai.php?ujian='+ujian+'&kelas='+kelas);
+}
