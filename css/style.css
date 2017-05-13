@@ -1,0 +1,26 @@
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+	background: #888;
+	color: #eee;
+	transition: 1s ease;
+}
+body{
+	background: #eee;
+}
+h3.page-header{
+	margin-top: 0;
+}
+#content{
+	font-style: 18px;
+	background: #fff;
+	margin-top: 60px;
+	min-height: 80%;
+	padding: 20px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 3px #ccc;
+	overflow: hidden;
+}
+footer{
+	padding: 10px 0;
+	color: #888;
+}
